@@ -167,6 +167,13 @@ var ActivityDefinitions = {
     activityFormula: "DURATION",
     cardioMultipilier: 0.3,
     strengthMultipilier: 0.8
+  },
+  STRENGTH_TRAINING: {
+    name: "Strength Training",
+    description: "High to moderate weight. Sets of max 20 reps.",
+    activityFormula: "DURATION",
+    cardioMultipilier: 0.3,
+    strengthMultipilier: 0.8
   }
 };
 export {
