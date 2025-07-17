@@ -221,3 +221,16 @@ export const ActivityDefinitions: Record<ActivityType, ActivityDefinition> = {
     strengthMultipilier: 0.8,
   },
 };
+export type LogActivityInput = {
+  leagueId: string;
+  matchId: string;
+  activityType: ActivityType;
+  duration: number;
+  sets: number;
+  reps: number;
+  photoUrl: string;
+  userId?: string;
+  cardioPoints?: number;
+  strengthPoints?: number;
+  activityNote?: string;
+};
