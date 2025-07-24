@@ -14,7 +14,6 @@ export type ActivityType =
   | "PILATES"
   | "CYCLING"
   | "SWIMMING"
-  | "WEIGHT_TRAINING"
   | "PICKLEBALL"
   | "GOLF"
   | "ROCK_CLIMBING"
@@ -72,8 +71,8 @@ export const ActivityDefinitions: Record<ActivityType, ActivityDefinition> = {
     cardioMultipilier: 0.5,
     strengthMultipilier: 0.3,
   },
-  WEIGHT_TRAINING: {
-    name: "Weight Training",
+  STRENGTH_TRAINING: {
+    name: "Strength Training",
     description: "Strength-focused exercises using weights to build muscle.",
     activityFormula: "SETSANDREPS",
     cardioMultipilier: 0.4,
@@ -209,13 +208,6 @@ export const ActivityDefinitions: Record<ActivityType, ActivityDefinition> = {
   YOGA: {
     name: " Yoga",
     description: "A mind-body practice that enhances flexibility and strength.",
-    activityFormula: "DURATION",
-    cardioMultipilier: 0.3,
-    strengthMultipilier: 0.8,
-  },
-  STRENGTH_TRAINING: {
-    name: "Strength Training",
-    description: "High to moderate weight. Sets of max 20 reps.",
     activityFormula: "DURATION",
     cardioMultipilier: 0.3,
     strengthMultipilier: 0.8,
