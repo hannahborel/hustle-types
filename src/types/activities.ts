@@ -33,6 +33,13 @@ export type ActivityDefinition = {
   strengthMultipilier: number;
 };
 export const ActivityDefinitions: Record<ActivityType, ActivityDefinition> = {
+  STRENGTH_TRAINING: {
+    name: "Strength Training",
+    description: "Moderate to heavy weight, sets of 8-20 reps",
+    activityFormula: "SETSANDREPS",
+    cardioMultipilier: 0.4,
+    strengthMultipilier: 1.0,
+  },
   CIRCUT_TRAINING: {
     name: "Circuit Training",
     description:
@@ -71,13 +78,7 @@ export const ActivityDefinitions: Record<ActivityType, ActivityDefinition> = {
     cardioMultipilier: 0.5,
     strengthMultipilier: 0.3,
   },
-  STRENGTH_TRAINING: {
-    name: "Strength Training",
-    description: "Strength-focused exercises using weights to build muscle.",
-    activityFormula: "SETSANDREPS",
-    cardioMultipilier: 0.4,
-    strengthMultipilier: 1.0,
-  },
+
   PICKLEBALL: {
     name: "Pickleball",
     description:
