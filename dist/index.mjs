@@ -1,5 +1,12 @@
 // src/types/activities.ts
 var ActivityDefinitions = {
+  STRENGTH_TRAINING: {
+    name: "Strength Training",
+    description: "Moderate to heavy weight, sets of 8-20 reps",
+    activityFormula: "SETSANDREPS",
+    cardioMultipilier: 0.4,
+    strengthMultipilier: 1
+  },
   CIRCUT_TRAINING: {
     name: "Circuit Training",
     description: "A mix of strength and cardio exercises performed in a sequence.",
@@ -34,13 +41,6 @@ var ActivityDefinitions = {
     activityFormula: "SETSANDREPS",
     cardioMultipilier: 0.5,
     strengthMultipilier: 0.3
-  },
-  WEIGHT_TRAINING: {
-    name: "Weight Training",
-    description: "Strength-focused exercises using weights to build muscle.",
-    activityFormula: "SETSANDREPS",
-    cardioMultipilier: 0.4,
-    strengthMultipilier: 1
   },
   PICKLEBALL: {
     name: "Pickleball",
@@ -164,13 +164,6 @@ var ActivityDefinitions = {
   YOGA: {
     name: " Yoga",
     description: "A mind-body practice that enhances flexibility and strength.",
-    activityFormula: "DURATION",
-    cardioMultipilier: 0.3,
-    strengthMultipilier: 0.8
-  },
-  STRENGTH_TRAINING: {
-    name: "Strength Training",
-    description: "High to moderate weight. Sets of max 20 reps.",
     activityFormula: "DURATION",
     cardioMultipilier: 0.3,
     strengthMultipilier: 0.8

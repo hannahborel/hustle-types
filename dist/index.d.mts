@@ -1,4 +1,4 @@
-type ActivityType = "RUNNING" | "JOGGING" | "SPRINTS" | "CIRCUT_TRAINING" | "INTERVAL_TRAINING" | "LONG_DISTANCE_RUNNING" | "TENNIS" | "BASKETBALL" | "FOOTBALL" | "VOLLEYBALL" | "BADMINTON" | "YOGA" | "PILATES" | "CYCLING" | "SWIMMING" | "WEIGHT_TRAINING" | "PICKLEBALL" | "GOLF" | "ROCK_CLIMBING" | "MARTIAL_ARTS" | "WALKING" | "HIIT" | "DANCE" | "STRENGTH_TRAINING" | "OTHER";
+type ActivityType = "RUNNING" | "JOGGING" | "SPRINTS" | "CIRCUT_TRAINING" | "INTERVAL_TRAINING" | "LONG_DISTANCE_RUNNING" | "TENNIS" | "BASKETBALL" | "FOOTBALL" | "VOLLEYBALL" | "BADMINTON" | "YOGA" | "PILATES" | "CYCLING" | "SWIMMING" | "PICKLEBALL" | "GOLF" | "ROCK_CLIMBING" | "MARTIAL_ARTS" | "WALKING" | "HIIT" | "DANCE" | "STRENGTH_TRAINING" | "OTHER";
 type activityFormula = "DURATION" | "SETSANDREPS";
 type ActivityDefinition = {
     name: string;
@@ -8,6 +8,19 @@ type ActivityDefinition = {
     strengthMultipilier: number;
 };
 declare const ActivityDefinitions: Record<ActivityType, ActivityDefinition>;
+type LogActivityInput = {
+    leagueId: string;
+    matchId: string;
+    activityType: ActivityType;
+    duration: number;
+    sets: number;
+    reps: number;
+    photoUrl: string;
+    userId?: string;
+    cardioPoints?: number;
+    strengthPoints?: number;
+    activityNote?: string;
+};
 
 type ApiErrorResponse = {
     message: string;
@@ -122,4 +135,4 @@ type Bot = {
     updatedAt: string;
 };
 
-export { type ActivityChallenge, type ActivityDefinition, ActivityDefinitions, type ActivityType, type ApiErrorResponse, type Bot, type FitMatchUser, type InsertActivityChallenge, type InsertLeague, type InsertLeagueMessage, type InsertLeagueToUser, type InsertLoggedActivity, type InsertMatch, type InsertMatchMessage, type InsertMatchToUser, type League, type LeagueMessage, type LeagueToUser, type LoggedActivity, type Match, type MatchMessage, type MatchToUser, type UpdateLeague, type activityFormula };
+export { type ActivityChallenge, type ActivityDefinition, ActivityDefinitions, type ActivityType, type ApiErrorResponse, type Bot, type FitMatchUser, type InsertActivityChallenge, type InsertLeague, type InsertLeagueMessage, type InsertLeagueToUser, type InsertLoggedActivity, type InsertMatch, type InsertMatchMessage, type InsertMatchToUser, type League, type LeagueMessage, type LeagueToUser, type LogActivityInput, type LoggedActivity, type Match, type MatchMessage, type MatchToUser, type UpdateLeague, type activityFormula };
