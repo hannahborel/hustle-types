@@ -25,6 +25,16 @@ type LogActivityInput = {
 type ApiErrorResponse = {
     message: string;
 };
+interface AppUser {
+    clerkId: string;
+    firstName: string;
+    lastName?: string;
+    email: string;
+    thumbnailUrl?: string;
+    points: number;
+    isLeagueManager: boolean;
+    lastSyncedAt: Date;
+}
 type FitMatchUser = {
     id: string;
     username: string;
@@ -33,6 +43,20 @@ type FitMatchUser = {
     imageUrl: string;
     isBot: boolean;
 };
+type User = {
+    id: string;
+    firstName: string;
+    lastName: string | null;
+    email: string;
+    thumbnailUrl: string | null;
+    points: number;
+    isLeagueManager: boolean;
+    lastSyncedAt: Date;
+    createdAt: Date;
+    updatedAt: Date;
+};
+type InsertUser = Omit<User, "createdAt" | "updatedAt">;
+type UpdateUser = Omit<Partial<User>, "id"> & Pick<User, "id">;
 
 type League = {
     id: string;
@@ -135,4 +159,4 @@ type Bot = {
     updatedAt: string;
 };
 
-export { type ActivityChallenge, type ActivityDefinition, ActivityDefinitions, type ActivityType, type ApiErrorResponse, type Bot, type FitMatchUser, type InsertActivityChallenge, type InsertLeague, type InsertLeagueMessage, type InsertLeagueToUser, type InsertLoggedActivity, type InsertMatch, type InsertMatchMessage, type InsertMatchToUser, type League, type LeagueMessage, type LeagueToUser, type LogActivityInput, type LoggedActivity, type Match, type MatchMessage, type MatchToUser, type UpdateLeague, type activityFormula };
+export { type ActivityChallenge, type ActivityDefinition, ActivityDefinitions, type ActivityType, type ApiErrorResponse, type AppUser, type Bot, type FitMatchUser, type InsertActivityChallenge, type InsertLeague, type InsertLeagueMessage, type InsertLeagueToUser, type InsertLoggedActivity, type InsertMatch, type InsertMatchMessage, type InsertMatchToUser, type InsertUser, type League, type LeagueMessage, type LeagueToUser, type LogActivityInput, type LoggedActivity, type Match, type MatchMessage, type MatchToUser, type UpdateLeague, type UpdateUser, type User, type activityFormula };
