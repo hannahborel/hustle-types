@@ -135,6 +135,17 @@ export type InsertActivityChallenge = Omit<
   "id" | "createdAt" | "updatedAt"
 >;
 
+// Create League Input (for API requests)
+export type CreateLeagueInput = {
+  name: string;
+  description: string;
+  size: number;
+  weeks: number;
+  startDate: string; // ISO date string
+  slug?: string;
+  ownerId?: string;
+};
+
 // Bot (for FitMatchBot maybe)
 export type Bot = {
   id: string;

@@ -148,6 +148,15 @@ type ActivityChallenge = {
     updatedAt: string;
 };
 type InsertActivityChallenge = Omit<ActivityChallenge, "id" | "createdAt" | "updatedAt">;
+type CreateLeagueInput = {
+    name: string;
+    description: string;
+    size: number;
+    weeks: number;
+    startDate: string;
+    slug?: string;
+    ownerId?: string;
+};
 type Bot = {
     id: string;
     firstName: string;
@@ -159,4 +168,4 @@ type Bot = {
     updatedAt: string;
 };
 
-export { type ActivityChallenge, type ActivityDefinition, ActivityDefinitions, type ActivityType, type ApiErrorResponse, type AppUser, type Bot, type FitMatchUser, type InsertActivityChallenge, type InsertLeague, type InsertLeagueMessage, type InsertLeagueToUser, type InsertLoggedActivity, type InsertMatch, type InsertMatchMessage, type InsertMatchToUser, type InsertUser, type League, type LeagueMessage, type LeagueToUser, type LogActivityInput, type LoggedActivity, type Match, type MatchMessage, type MatchToUser, type UpdateLeague, type UpdateUser, type User, type activityFormula };
+export { type ActivityChallenge, type ActivityDefinition, ActivityDefinitions, type ActivityType, type ApiErrorResponse, type AppUser, type Bot, type CreateLeagueInput, type FitMatchUser, type InsertActivityChallenge, type InsertLeague, type InsertLeagueMessage, type InsertLeagueToUser, type InsertLoggedActivity, type InsertMatch, type InsertMatchMessage, type InsertMatchToUser, type InsertUser, type League, type LeagueMessage, type LeagueToUser, type LogActivityInput, type LoggedActivity, type Match, type MatchMessage, type MatchToUser, type UpdateLeague, type UpdateUser, type User, type activityFormula };
